@@ -15,3 +15,8 @@
 
 ### Push a new image to a registry
 - First save the new image by finding the container ID (using docker container ls) and then committing it to a new image name. Note that only a-z0-9-_. are allowed when naming images:
+-docker tag image id dockerhubusername/imagename:mytag
+To login
+- docker login docker.io
+- docker push dockerhubusername/imagename:mytag
+<img width="939" alt="Screenshot 2022-10-11 115819" src="https://user-images.githubusercontent.com/63906551/195062117-199db02a-f989-427d-9e01-5b369e440072.png">
