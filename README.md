@@ -20,3 +20,21 @@ To login
 - docker login docker.io
 - docker push dockerhubusername/imagename:mytag
 <img width="939" alt="Screenshot 2022-10-11 115819" src="https://user-images.githubusercontent.com/63906551/195062117-199db02a-f989-427d-9e01-5b369e440072.png">
+
+
+- remove a running container
+This command removes a running container/Images.
+docker rmi debian
+<img width="920" alt="Screenshot 2022-10-11 121621" src="https://user-images.githubusercontent.com/63906551/195064624-8a4e5cca-a9c2-4398-a0cb-da6cd1e8ea65.png">
+
+
+#### Run a command in a new container
+
+-Usage
+ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+ <img width="920" alt="Screenshot 2022-10-11 121621" src="https://user-images.githubusercontent.com/63906551/195065252-6657c376-3228-4ee5-9577-f1b609810c1e.png">
+
+- docker compose up -d
+- docker compose run web env<img width="949" alt="Screenshot 2022-10-11 122753" src="https://user-images.githubusercontent.com/63906551/195067028-3dccde35-e8db-4337-bd14-e3ee616b937e.png">
+
+- docker compose down --volumes
