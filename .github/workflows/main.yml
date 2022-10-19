@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+   push:
+      branches: [ nain ]
+   pull_request:
+       branches: [nain]
+ 
+jobs:
+  build:
+     runs_on: [ ubuntu-latest,windows latest ]
+     steps:
+     - uses: actions/checkout@v2
+     - name: docker login
+       env:
+         DOCKER_USER: ${{secrets.DOCKER_USER}}
+         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+       run:
+          docker login -u $DOCKER_USER -p DOCKER_PASSWORD
+     - name: Build the Docker image
+       run: docker build . --file Dockerfile --tag 831a8a0b158b sulochanaakk/composetest-web:$(date +%s)
+     - name: Docker Push
+       run: docker push ${{secrets.DOCKER_USER}}//sulochanaakk/composetest-web
+    
+ 
+   
