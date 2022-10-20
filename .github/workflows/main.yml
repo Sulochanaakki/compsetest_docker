@@ -19,7 +19,7 @@ jobs:
        run:
           docker login -u $DOCKER_USER -p DOCKER_PASSWORD
      - name: Build the Docker image
-       run: docker build . --file Dockerfile --tag 831a8a0b158b sulochanaakk/composetest-web:$(date +%s)
+       run: docker build . --file Dockerfile --tag 831a8a0b158b sulochanaakk/composetest:$(date +%s)
      - name: Docker Push
        run: docker push ${{secrets.DOCKER_USER}}//sulochanaakk/composetest-web
     
